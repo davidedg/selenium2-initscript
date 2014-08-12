@@ -1,0 +1,27 @@
+# Defaults for Selenium Node Server.
+
+NAME=selenium-node
+
+# Override /etc/security/limits.conf
+MAXOPENFILES=8192
+
+
+# Java options
+JAVA=`which java`
+JAVA_ARGS=""
+#JAVA_ARGS="${JAVA_ARGS} -Xmx256m"
+#JAVA_ARGS="${JAVA_ARGS} -Dhttp.proxyHost=<PROXY-IP> -Dhttp.proxyPort=8888 -Dhttp.nonProxyHosts=\"*.local\""
+
+# UID SELENIUM node will run as
+SELENIUM_NODE_USER=selenium-node
+
+SELENIUM_NODE_DISPLAY=":99.0"
+
+# Logfile
+SELENIUM_NODE_LOG=/var/log/$NAME/$NAME.log
+
+# Node Config File
+SELENIUM_NODE_CONFIG=/etc/selenium/DefaultNode.json
+
+# Selenium Node arguments
+SELENIUM_NODE_EXTRA_ARGS="-maxSession 3 -trustAllSSLCertificates -browserSessionReuse"

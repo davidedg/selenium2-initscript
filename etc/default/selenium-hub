@@ -1,0 +1,24 @@
+# Defaults for Selenium Hub Server.
+
+NAME=selenium-hub
+
+# Override /etc/security/limits.conf
+MAXOPENFILES=8192
+
+# Java options
+JAVA=`which java`
+JAVA_ARGS=""
+#JAVA_ARGS="${JAVA_ARGS} -Xmx256m"
+#JAVA_ARGS="${JAVA_ARGS} -Dhttp.proxyHost=<PROXY-IP> -Dhttp.proxyPort=8888 -Dhttp.nonProxyHosts=\"*.local\""
+
+# UID SELENIUM hub will run as
+SELENIUM_HUB_USER=selenium-hub
+
+# Logfile
+SELENIUM_HUB_LOG=/var/log/$NAME/$NAME.log
+
+# Hub Config File
+SELENIUM_HUB_CONFIG=/etc/selenium/DefaultHub.json
+
+# Selenium Hub arguments
+SELENIUM_HUB_EXTRA_ARGS=""
