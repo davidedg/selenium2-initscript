@@ -24,4 +24,5 @@ SELENIUM_NODE_LOG=/var/log/$NAME/$NAME.log
 SELENIUM_NODE_CONFIG=/etc/selenium/DefaultNode.json
 
 # Selenium Node arguments
-SELENIUM_NODE_EXTRA_ARGS="-maxSession 3 -trustAllSSLCertificates -browserSessionReuse"
+#SELENIUM_NODE_EXTRA_ARGS="-maxSession 3 -trustAllSSLCertificates -browserSessionReuse"
+SELENIUM_NODE_EXTRA_ARGS="-maxSession 3 -trustAllSSLCertificates"
